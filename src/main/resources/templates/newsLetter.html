@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html xmlns:th="https://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Email Template</title>
+    <style>
+        table {
+            width: 100%;
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 20px;
+            border-collapse: collapse;
+        }
+        th, td {
+            padding: 10px;
+            text-align: center;
+        }
+        .header {
+            background-color: #f0f0f0;
+        }
+        .footer {
+            background-color: #e0e0e0;
+        }
+    </style>
+</head>
+<body>
+    <table>
+        <tr class="header">
+            <th style="text-align: left;">Header Left Text</th>
+            <th style="text-align: right;">Header Right Text</th>
+        </tr>
+        <tr>
+            <td colspan="2" th:text="${name}"/>
+        </tr>
+        <tr class="footer">
+            <td colspan="2">Footer Text</td>
+        </tr>
+    </table>
+</body>
+</html>
